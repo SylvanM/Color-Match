@@ -39,13 +39,11 @@ class MainViewController: UIViewController {
         view.bringSubviewToFront(colorView)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         cameraLayer.frame = cameraView.bounds
         cameraLayer.session?.startRunning()
     }
-    
-    
     
     // MARK: View Functions
     
@@ -70,13 +68,19 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        captureSession.stopRunning()
+//        captureSession.stopRunning()
         
         if let colorVC = segue.destination as? ColorViewController {
             colorVC.color = colorView.backgroundColor!
         }
     }
 
-
+    // MARK: Interface Actions
+    
+    
+    @IBAction func captureButtonWasPressed(_ sender: Any) {
+        performSegue(withIdentifier: "show_color_view", sender: self)
+    }
+    
 }
 
