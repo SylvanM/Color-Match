@@ -86,15 +86,8 @@ class MainViewController: UIViewController {
     
     
     @IBAction func captureButtonWasPressed(_ sender: Any) {
-        // Instead of performing a segue onto the color analyzer, we will just print out the RGB color values, lolz
-//        performSegue(withIdentifier: "show_color_view", sender: self)
         
-        var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
-        colorView.tintColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
-        
-        print("\(idCounter), \(red), \(green), \(blue)")
-        
-        idCounter += 1
+        performSegue(withIdentifier: "show_color_view", sender: self)
         
     }
     
