@@ -14,7 +14,7 @@ class ColorViewController: UIViewController {
     /// The color to analyze
     var color: UIColor = .white
     
-    var rgb: [CGFloat] = [0, 0, 0]
+    var rgb: [Double] = [0, 0, 0]
     
     // MARK: - Visual Properties
     
@@ -31,6 +31,8 @@ class ColorViewController: UIViewController {
     @IBOutlet weak var blueLabel: UILabel!
     @IBOutlet weak var blueBar: UIProgressView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var colorBars:  [UIProgressView] = []
     var labels:     [UILabel] = []
     
@@ -44,7 +46,7 @@ class ColorViewController: UIViewController {
         colorView.backgroundColor = color
         var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
         color.getRed(&red, green: &green, blue: &blue, alpha: nil)
-        rgb = [red, green, blue]
+        rgb = [red, green, blue].map { Double($0) }
         colorBars = [redBar, greenBar, blueBar]
         
         labels = [redLabel, greenLabel, blueLabel]
@@ -59,6 +61,11 @@ class ColorViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("Replicating...")
+        replicateColor()
+    }
+    
 
     // MARK: - Navigation
 
@@ -66,7 +73,6 @@ class ColorViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        print("Heys")
         
     }
 

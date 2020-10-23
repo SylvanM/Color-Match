@@ -12,6 +12,13 @@ typealias MVC = MainViewController
 
 class MainViewController: UIViewController {
     
+    // MARK: Developer Properties
+    
+    /// ID Counter
+    ///
+    /// Incremements every time a color is scanned.
+    var idCounter: Int = 1
+    
     // MARK: AV Properties
     
     static let pixelWindowSize = 8
@@ -63,7 +70,7 @@ class MainViewController: UIViewController {
         averages.blue   /= CGFloat(255 * strippedRGBs.count)
         
         let color = UIColor(red: averages.red, green: averages.green, blue: averages.blue, alpha: 1)
-        colorView.backgroundColor = color
+        colorView.tintColor = color
         
     }
     
@@ -71,7 +78,7 @@ class MainViewController: UIViewController {
 //        captureSession.stopRunning()
         
         if let colorVC = segue.destination as? ColorViewController {
-            colorVC.color = colorView.backgroundColor!
+            colorVC.color = colorView.tintColor!
         }
     }
 
@@ -79,7 +86,16 @@ class MainViewController: UIViewController {
     
     
     @IBAction func captureButtonWasPressed(_ sender: Any) {
-        performSegue(withIdentifier: "show_color_view", sender: self)
+        // Instead of performing a segue onto the color analyzer, we will just print out the RGB color values, lolz
+//        performSegue(withIdentifier: "show_color_view", sender: self)
+        
+        var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
+        colorView.tintColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
+        
+        print("\(idCounter), \(red), \(green), \(blue)")
+        
+        idCounter += 1
+        
     }
     
 }
