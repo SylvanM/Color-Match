@@ -33,6 +33,8 @@ class ColorViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
     var colorBars:  [UIProgressView] = []
     var labels:     [UILabel] = []
     
@@ -64,9 +66,31 @@ class ColorViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         print("Replicating...")
         replicateColor()
+        
     }
     
-
+    // MARK: Interface Actions
+    
+    /**
+     * Called when the save button is pressed
+     */
+    @IBAction func saveButtonWasPressed(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Save Color", message: "What is this color's name?", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            // code codes here that is run when user hits save
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
