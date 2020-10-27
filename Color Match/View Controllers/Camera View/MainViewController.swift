@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
     // MARK: Interface Properties
     
     @IBOutlet weak var captureButton: UIButton!
+    @IBOutlet weak var lightSlider: UISlider!
     
     // MARK: View Controller
     
@@ -44,12 +45,19 @@ class MainViewController: UIViewController {
         cameraView.layer.addSublayer(cameraLayer)
         view.sendSubviewToBack(cameraView)
         view.bringSubviewToFront(colorView)
+        let colorlib = ColorLibraryObject()
+        colorlib.saveLibrary()
+        
+        // move light slider to beind vertical and on the side
+        lightSlider.transform = lightSlider.transform.rotated(by: .pi / 2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         cameraLayer.frame = cameraView.bounds
         cameraLayer.session?.startRunning()
+        
+        #warning("test")
     }
     
     // MARK: View Functions
@@ -60,9 +68,9 @@ class MainViewController: UIViewController {
         var averages: (red: CGFloat, blue: CGFloat, green: CGFloat) = (red: 0, blue: 0, green: 0)
         
         for rgb in strippedRGBs {
-            averages.blue    += CGFloat((rgb & 0xFF)     >> 0 )
-            averages.green  += CGFloat((rgb & 0xFF00)   >> 8 )
-            averages.red   += CGFloat((rgb & 0xFF0000) >> 16)
+            averages.red    += CGFloat((rgb & 0xFF0000) >> 16)
+            averages.green  += CGFloat((rgb & 0x00FF00) >> 8 )
+            averages.blue   += CGFloat((rgb & 0x0000FF) >> 0 )
         }
         
         averages.red    /= CGFloat(255 * strippedRGBs.count)

@@ -16,35 +16,12 @@ class SavedDataManager {
      */
     enum SavedFileName: String {
         
-        case settings = "settings.plist"
-        case colorlib = "colorlib.plist"
+        case settings = "settings.json"
+        case colorlib = "colorlib.json"
         
     }
     
     // MARK: - Static Properties
-    
-    /**
-     * Class to manage the saved user settings
-     */
-    static let settings = SavedDataManager(for: .settings)
-    
-    /**
-     * Class to manage the saved color library
-     */
-    static let colorlib = SavedDataManager(for: .colorlib)
-    
-    /**
-     * The default values for each plist file
-     */
-    static let defaultValues: [SavedFileName : [String : Any]] = [
-        .settings: [
-            SettingsManager.UserSettingName.shouldUseWatercolor.rawValue : false
-        ],
-        
-        .colorlib: [
-            : // empty dictionary
-        ]
-    ]
     
     /**
      * The documents directory of the user's phone for this app
@@ -54,32 +31,15 @@ class SavedDataManager {
     // MARK: - Properties
     
     /**
-     * The current file being managed
+     * The file being managed
      */
-    private var savedFile: SavedFileName
+    var savedFile: SavedFileName
     
     /**
      * The url to the current file being managed
      */
-    private var savedFilePath: URL {
+    private var savedFileURL: URL {
         SavedDataManager.docDir.appendingPathComponent(savedFile.rawValue, isDirectory: false)
-    }
-    
-    /**
-     * The dictionary object representation of this files contents
-     */
-    var savedData: [String : Any] {
-        get {
-            NSDictionary(contentsOf: savedFilePath) as? [String : Any] ?? Self.defaultValues[savedFile]!
-        }
-        set {
-            let nsDict = NSDictionary(dictionary: newValue)
-            do {
-                try nsDict.write(to: savedFilePath)
-            } catch {
-                print("Error on saving \(newValue):", error)
-            }
-        }
     }
     
     // MARK: - Initializers
@@ -94,24 +54,21 @@ class SavedDataManager {
     // MARK: Methods
     
     /**
-     * Saves an item
+     * Retrieves the json object for the file. If the file does not exist, create an empty one.
      */
-    func save(item: String, withValue value: Any) {
-        savedData[item] = value
+    func retrieveDict() -> [String : Any] {
+        let data = try! Data(contentsOf: savedFileURL)
+        let json = try! JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as! [String : Any]
+        return json
     }
     
     /**
-     * Retrieves an item with a particular key
+     * Saves the json object to the file
      */
-    func retrieve(item: String) -> Any {
-        savedData[item]!
-    }
-    
-    /**
-     * Retrieves **all** key-value pairs in this file. Returns a copy of the saved data as a dictionary
-     */
-    func retrieveAll() -> [String : Any] {
-        savedData
+    func saveDict(dict: [String : Any]) {
+        let json = try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+        let data = Data(json)
+        try! data.write(to: savedFileURL)
     }
     
 }
