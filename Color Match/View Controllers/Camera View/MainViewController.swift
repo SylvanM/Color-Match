@@ -44,6 +44,17 @@ class MainViewController: UIViewController {
         cameraView.layer.addSublayer(cameraLayer)
         view.sendSubviewToBack(cameraView)
         view.bringSubviewToFront(colorView)
+<<<<<<< Updated upstream
+=======
+        let colorlib = ColorLibraryObject()
+        colorlib.saveLibrary()
+        
+        // Light Slider
+        
+        // by default the light should be off
+        lightSlider.setValue(0, animated: false)
+        
+>>>>>>> Stashed changes
     }
     
     override func viewWillAppear(_ animated: Bool) {
