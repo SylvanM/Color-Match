@@ -45,7 +45,9 @@ class ColorViewController: UIViewController {
     @IBOutlet weak var blueLabel: UILabel!
     @IBOutlet weak var blueBar: UIProgressView!
     
-
+<<<<<<< Updated upstream
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+=======
     @IBOutlet weak var saveButton: UIButton!
     
     /*
@@ -61,6 +63,8 @@ class ColorViewController: UIViewController {
     @IBOutlet weak var whitePigmentLabel: UIProgressView!
     
     var pigmentBars: [ColorReplicator.Paint : UIProgressView]!
+    
+>>>>>>> Stashed changes
     
     var colorBars:  [UIProgressView] = []
     var labels:     [UILabel] = []
@@ -105,6 +109,9 @@ class ColorViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         print("Replicating...")
+<<<<<<< Updated upstream
+        replicateColor()
+=======
         
         let replicator = ColorReplicator()
         
@@ -156,7 +163,7 @@ class ColorViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
         
-
+>>>>>>> Stashed changes
     }
     
 
