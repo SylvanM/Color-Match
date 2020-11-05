@@ -44,14 +44,20 @@ class MainViewController: UIViewController {
         cameraView.layer.addSublayer(cameraLayer)
         view.sendSubviewToBack(cameraView)
         view.bringSubviewToFront(colorView)
+<<<<<<< Updated upstream
+=======
         let colorlib = ColorLibraryObject()
         colorlib.saveLibrary()
         
         // Light Slider
         
         // by default the light should be off
-//        lightSlider.setValue(0, animated: false)
+        lightSlider.setValue(0, animated: false)
         
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,9 +74,9 @@ class MainViewController: UIViewController {
         var averages: (red: CGFloat, blue: CGFloat, green: CGFloat) = (red: 0, blue: 0, green: 0)
         
         for rgb in strippedRGBs {
-            averages.red    += CGFloat((rgb & 0xFF0000) >> 16)
-            averages.green  += CGFloat((rgb & 0x00FF00) >> 8 )
-            averages.blue   += CGFloat((rgb & 0x0000FF) >> 0 )
+            averages.blue    += CGFloat((rgb & 0xFF)     >> 0 )
+            averages.green  += CGFloat((rgb & 0xFF00)   >> 8 )
+            averages.red   += CGFloat((rgb & 0xFF0000) >> 16)
         }
         
         averages.red    /= CGFloat(255 * strippedRGBs.count)
