@@ -33,6 +33,8 @@ extension MainViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
      */
     func setupSession() {
         
+        var scaleFactor = self.view.bounds.width
+        
         captureSession.beginConfiguration()
         
         let videoDevice = bestDevice
@@ -44,6 +46,8 @@ extension MainViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             return
         }
         
+        
+        
         captureSession.addInput(videoDeviceInput)
         
         guard captureSession.canAddOutput(videoOutput) else { return }
@@ -53,13 +57,21 @@ extension MainViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         captureSession.addOutput(videoOutput)
         captureSession.commitConfiguration()
         
-        cameraLayer.videoGravity = .resizeAspectFill
+        cameraLayer.videoGravity = .resizeAspect
         cameraLayer.connection?.videoOrientation = .portrait
+        
+        // compute scale factor by which to zoom in the view
+        scaleFactor /= cameraView.frame.width
+        cameraView.transform = cameraView.transform.scaledBy(x: scaleFactor, y: scaleFactor)
         
         cameraLayer.session = captureSession
         videoOutput.setSampleBufferDelegate(self, queue: serialQueue)
         
         videoOutput.videoSettings["PixelFormatType"] = 1111970369 // this is the number that tells it we want the data in the RGBA format
+        videoOutput.videoSettings["Height"] = view.bounds.height
+        videoOutput.videoSettings["Width"] = view.bounds.width
+        
+        print(videoOutput.videoSettings!)
         
     }
     

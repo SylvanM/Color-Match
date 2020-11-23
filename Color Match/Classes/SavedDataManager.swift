@@ -76,6 +76,7 @@ class SavedDataManager {
      * Saves the json object to the file
      */
     func saveDict(dict: [String : Any]) {
+        print(dict)
         let json = try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
         let data = Data(json)
         try! data.write(to: savedFileURL)

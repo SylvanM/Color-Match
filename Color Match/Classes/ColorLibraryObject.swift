@@ -12,6 +12,7 @@ class ColorLibraryObject {
     // MARK: Properties
     
     typealias SavedColor = (rgb: RGB, pigments: [ColorReplicator.Paint : Double])
+    typealias LibraryType = (acrylic: [String : SavedColor], watercolor: [String : SavedColor])
     
     /**
      * The file manager
@@ -21,7 +22,7 @@ class ColorLibraryObject {
     /**
      * The colors in the user's library
      */
-    var library: [String : SavedColor] = [:]
+    var library: LibraryType = (acrylic: [:], watercolor: [:])
     
     // MARK: Initilalizers
     
@@ -45,43 +46,65 @@ class ColorLibraryObject {
     /**
      * Adds and saves a new color to the library
      */
-    public class func add(name: String, color: SavedColor) {
+    public class func add(name: String, color: SavedColor, type: Settings.PaintType) {
         let libraryObject = ColorLibraryObject()
-        libraryObject.library[name] = color
+        
+        switch type {
+        case .acrlyic:
+            libraryObject.library.acrylic[name] = color
+        case .watercolor:
+            libraryObject.library.watercolor[name] = color
+        }
+
         libraryObject.saveLibrary()
     }
     
     /**
      * Gets all the saved colors
      */
-    public class func getColors() -> [String : SavedColor] {
+    public class func getColors() -> LibraryType {
         let libraryObject = ColorLibraryObject()
         return libraryObject.library
     }
     
-    private class func encodeDict(_ library: [String : SavedColor]) -> [String : Any] {
+    private class func encodeDict(_ library: LibraryType) -> [String : Any] {
         
         /// Converts a `SavedColor` to a JSON-compatible thingy
         func colorToJSON(color: SavedColor) -> [String : Any] {
             [
                 ColorLibJSONKey.rgb.rawValue        : [color.rgb.red, color.rgb.green, color.rgb.blue],
-                ColorLibJSONKey.pigments.rawValue   : color.pigments.map({ (element) -> ((key: String, value: Double)) in
-                    (key: element.key.rawValue, value: element.value)
-                })
+                ColorLibJSONKey.pigments.rawValue   : { 
+                    var pigmentDict: [String : Any] = [:]
+                    for key in color.pigments.keys {
+                        pigmentDict[key.rawValue] = color.pigments[key]
+                    }
+                    return pigmentDict
+                }()
             ]
         }
         
         var dict: [String : Any] = [:]
+        var tempColorGroup: [String : Any] = [:]
         
-        for key in library.keys {
-            dict[key] = colorToJSON(color: library[key]!)
+        // save the acrylic colors
+        for key in library.acrylic.keys {
+            tempColorGroup[key] = colorToJSON(color: library.acrylic[key]!)
         }
+        print(tempColorGroup)
+        dict[Settings.PaintType.acrlyic.rawValue] = tempColorGroup
+        tempColorGroup = [:]
+        
+        // save the watercolor colors
+        for key in library.watercolor.keys {
+            tempColorGroup[key] = colorToJSON(color: library.watercolor[key]!)
+        }
+        dict[Settings.PaintType.watercolor.rawValue] = tempColorGroup
         
         return dict
         
     }
     
-    private class func decodeDict(_ dict: [String : Any]) -> [String : SavedColor] {
+    private class func decodeDict(_ dict: [String : Any]) -> LibraryType {
         
         /// Converts a JSON compatible dictionary to a `SavedColor`
         func jsonToColor(json: [String : Any]) -> SavedColor {
@@ -99,10 +122,18 @@ class ColorLibraryObject {
             )
         }
         
-        var library: [String : SavedColor] = [:]
+        var library: LibraryType = (acrylic: [:], watercolor: [:])
         
-        for key in dict.keys {
-            library[key] = jsonToColor(json: dict[key] as! [String : Any])
+        var tempColorGroup: [String : Any] = dict[Settings.PaintType.acrlyic.rawValue] as! [String : Any]
+        
+        for key in tempColorGroup.keys {
+            library.acrylic[key] = jsonToColor(json: tempColorGroup[key] as! [String : Any])
+        }
+        
+        tempColorGroup = dict[Settings.PaintType.watercolor.rawValue] as! [String : Any]
+        
+        for key in tempColorGroup.keys {
+            library.watercolor[key] = jsonToColor(json: tempColorGroup[key] as! [String : Any])
         }
         
         return library

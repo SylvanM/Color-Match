@@ -67,6 +67,8 @@ class ColorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        definesPresentationContext = true
+        
         pigmentBars = [
             .red: redPigmentLabel,
             .yellow: yellowPigmentLabel,
@@ -126,34 +128,61 @@ class ColorViewController: UIViewController {
      */
     @IBAction func saveButtonWasPressed(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Save Color", message: "What is this color's name?", preferredStyle: .alert)
+        var paintType = Settings.PaintType.acrlyic
         
-        alertController.addTextField { textField in
-            textField.placeholder = "Color Name"
+        
+        let paintTypeChooserAC = UIAlertController(title: "Choose Paint Type", message: "What kind of paint is this?", preferredStyle: .actionSheet)
+        let saveColorAC = UIAlertController(title: "Save The Color", message: "Please name the color to save it", preferredStyle: .alert)
+
+        
+        let acrylicAction = UIAlertAction(title: "Acrylic", style: .default) {_ in 
+            paintTypeChooserAC.dismiss(animated: true) {
+                self.present(saveColorAC, animated: true, completion: nil)
+            }
+        }
+        let watercolorAction = UIAlertAction(title: "Watercolor", style: .default) { _ in
+            paintType = .watercolor
+            
+            paintTypeChooserAC.dismiss(animated: true) {
+                self.present(saveColorAC, animated: true, completion: nil)
+            }
         }
         
-        let saveAction = UIAlertAction(title: "Save", style: .default) { [self] _ in
-            // make sure the user actually typed a name
-            if alertController.textFields?.first?.text == "" || alertController.textFields?.first?.text == nil {
-                displayAlert(sender: self, title: "No Name Given", description: "Please enter a name for the color before you save it")
+        var cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        paintTypeChooserAC.addActions(actions: acrylicAction, watercolorAction, cancelAction)
+        
+        self.present(paintTypeChooserAC, animated: true) {
+            // after this one is presented, present the "save" view controller
+            
+            
+            saveColorAC.addTextField { textField in
+                textField.placeholder = "Color Name"
             }
             
-            // make sure we have already calculated the pigments
-            if pigments == nil {
-                displayAlert(sender: self, title: "Pigments not Calculated", description: "Please wait until the pigment mixture has been calculated before saving the color")
+            let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+                if let colorName = saveColorAC.textFields?.first?.text {
+                    
+                    let color = (rgb: (red: self.rgb[0], green: self.rgb[1], blue: self.rgb[2]), pigments: self.pigments)
+                    
+                    ColorLibraryObject.add(name: colorName, color: color, type: paintType)
+                    
+                    
+                    
+                } else {
+                    // if the user didn't enter anything in the name text field, present the alert again
+                    displayAlert(sender: self, title: "Missing Name", description: "Please name the color before saving") {
+                        self.present(saveColorAC, animated: true, completion: nil)
+                    }
+                }
             }
             
-            // save the color
-            let name = alertController.textFields?.first!.text
-            let color = (rgb: (red: rgb[0], green: rgb[1], blue: rgb[2]), pigments: pigments)
-            ColorLibraryObject.add(name: name!, color: color)
+            cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            saveColorAC.addActions(actions: saveAction, cancelAction)
+            
+            
         }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        alertController.addActions(actions: saveAction, cancelAction)
-        
-        self.present(alertController, animated: true, completion: nil)
         
     }
     

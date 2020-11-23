@@ -21,7 +21,11 @@ class MainViewController: UIViewController {
     
     // MARK: AV Properties
     
-    static let pixelWindowSize = 8
+    static var pixelWindowSize = 8
+        
+//        : Int {
+//        Settings.selectionWindowSize
+//    }
     
     let captureSession  = AVCaptureSession()
     let cameraLayer     = AVCaptureVideoPreviewLayer()
@@ -39,7 +43,12 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.view.bounds)
+        print(self.cameraView.bounds)
+        cameraLayer.frame = cameraView.bounds
         setupSession()
+        
+        
         
         cameraView.layer.addSublayer(cameraLayer)
         view.sendSubviewToBack(cameraView)
@@ -56,7 +65,7 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        cameraLayer.frame = cameraView.bounds
+        
         cameraLayer.session?.startRunning()
     }
     

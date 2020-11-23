@@ -22,9 +22,9 @@ func convert(rgb: [Double]) -> RGB {
 /**
  * Displays an alert controller
  */
-func displayAlert( sender: UIViewController, title: String, description: String, actions: [UIAlertAction] = [.okay] ) {
+func displayAlert( sender: UIViewController, title: String, description: String, actions: [UIAlertAction] = [.okay], completion: (() -> Void)? ) {
     let alertController = UIAlertController(title: title, message: description, preferredStyle: .alert)
     alertController.addActions(actions: actions)
-    sender.present(alertController, animated: true, completion: nil)
+    sender.present(alertController, animated: true, completion: completion)
 }
 
