@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     /// ID Counter
     ///
     /// Incremements every time a color is scanned.
-    var idCounter: Int = 1
+    var idCounter: Int = 504
     
     // MARK: AV Properties
     
@@ -74,25 +74,25 @@ class MainViewController: UIViewController {
     func showAverageColor(pixels: [UInt32]) {
         
         let strippedRGBs = pixels.map { $0 & 0xFFFFFF }
-        var averages: (red: CGFloat, blue: CGFloat, green: CGFloat) = (red: 0, blue: 0, green: 0)
+        var averages: [CGFloat] = [0, 0, 0]
         
         for rgb in strippedRGBs {
-            averages.red    += CGFloat((rgb & 0xFF0000) >> 16)
-            averages.green  += CGFloat((rgb & 0x00FF00) >> 8 )
-            averages.blue   += CGFloat((rgb & 0x0000FF) >> 0 )
+            averages[0] += CGFloat((rgb & 0xFF0000) >> 16)
+            averages[1] += CGFloat((rgb & 0x00FF00) >> 8 )
+            averages[2] += CGFloat((rgb & 0x0000FF) >> 0 )
         }
         
-        averages.red    /= CGFloat(255 * strippedRGBs.count)
-        averages.green  /= CGFloat(255 * strippedRGBs.count)
-        averages.blue   /= CGFloat(255 * strippedRGBs.count)
+        averages = averages.map { $0 / CGFloat(255 * strippedRGBs.count) }
         
-        let color = UIColor(red: averages.red, green: averages.green, blue: averages.blue, alpha: 1)
+        let color = UIColor(red: averages[0], green: averages[1], blue: averages[2], alpha: 1)
         colorView.tintColor = color
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        captureSession.stopRunning()
+        
+        
         
         if let colorVC = segue.destination as? ColorViewController {
             colorVC.color = colorView.tintColor!
@@ -104,7 +104,14 @@ class MainViewController: UIViewController {
     
     @IBAction func captureButtonWasPressed(_ sender: Any) {
         
-        performSegue(withIdentifier: "show_color_view", sender: self)
+        var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
+        colorView.tintColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
+        
+        print("\(idCounter), \(red), \(green), \(blue)")
+        
+        idCounter += 1
+        
+//        performSegue(withIdentifier: "show_color_view", sender: self)
         
     }
     

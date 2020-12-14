@@ -106,6 +106,8 @@ class ColorLibraryObject {
     
     private class func decodeDict(_ dict: [String : Any]) -> LibraryType {
         
+        if dict.isEmpty { return (acrylic: [:], watercolor: [:]) }
+        
         /// Converts a JSON compatible dictionary to a `SavedColor`
         func jsonToColor(json: [String : Any]) -> SavedColor {
             let rgb = json[ColorLibJSONKey.rgb.rawValue] as! [Double]

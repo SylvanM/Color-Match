@@ -57,12 +57,12 @@ extension MainViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         captureSession.addOutput(videoOutput)
         captureSession.commitConfiguration()
         
-        cameraLayer.videoGravity = .resizeAspect
+        cameraLayer.videoGravity = .resizeAspectFill
         cameraLayer.connection?.videoOrientation = .portrait
         
         // compute scale factor by which to zoom in the view
-        scaleFactor /= cameraView.frame.width
-        cameraView.transform = cameraView.transform.scaledBy(x: scaleFactor, y: scaleFactor)
+//        scaleFactor /= cameraView.frame.width
+//        cameraView.transform = cameraView.transform.scaledBy(x: scaleFactor, y: scaleFactor)
         
         cameraLayer.session = captureSession
         videoOutput.setSampleBufferDelegate(self, queue: serialQueue)
