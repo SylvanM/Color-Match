@@ -15,18 +15,18 @@
 		AE25AF36252CC13B006ECCEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE25AF34252CC13B006ECCEE /* LaunchScreen.storyboard */; };
 		AE25AF41252CC13C006ECCEE /* Color_MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25AF40252CC13C006ECCEE /* Color_MatchTests.swift */; };
 		AE25AF4C252CC13C006ECCEE /* Color_MatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25AF4B252CC13C006ECCEE /* Color_MatchUITests.swift */; };
+		AE303FB3259D2E6800141B26 /* Acrylic Sepia Brown.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE303FAB259D2E6800141B26 /* Acrylic Sepia Brown.mlmodel */; };
+		AE303FB4259D2E6800141B26 /* Acrylic Light Blue.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE303FAC259D2E6800141B26 /* Acrylic Light Blue.mlmodel */; };
+		AE303FB5259D2E6800141B26 /* Acrylic Burnt Umber.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE303FAD259D2E6800141B26 /* Acrylic Burnt Umber.mlmodel */; };
+		AE303FB6259D2E6800141B26 /* Acrylic White.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE303FAE259D2E6800141B26 /* Acrylic White.mlmodel */; };
+		AE303FB7259D2E6800141B26 /* Acrylic Yellow.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE303FAF259D2E6800141B26 /* Acrylic Yellow.mlmodel */; };
+		AE303FB8259D2E6800141B26 /* Acrylic Yellow Ochre.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE303FB0259D2E6800141B26 /* Acrylic Yellow Ochre.mlmodel */; };
+		AE303FB9259D2E6800141B26 /* Acrylic Red.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE303FB1259D2E6800141B26 /* Acrylic Red.mlmodel */; };
+		AE303FBA259D2E6800141B26 /* Acrylic Dark Blue.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE303FB2259D2E6800141B26 /* Acrylic Dark Blue.mlmodel */; };
 		AE676DB525484EA000E91159 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE676DB425484EA000E91159 /* Utility.swift */; };
 		AE676DBB25484FC700E91159 /* AC+ActionsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE676DBA25484FC700E91159 /* AC+ActionsUtil.swift */; };
 		AE71E1062554BF8A00D80686 /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE71E1052554BF8A00D80686 /* LibraryCollectionViewController.swift */; };
 		AE71E10E2554C1EC00D80686 /* LibraryItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE71E10D2554C1EC00D80686 /* LibraryItemViewCell.swift */; };
-		AEA21B3C2587B1AA0004E535 /* Acrylic Sepia Brown.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B342587B1A90004E535 /* Acrylic Sepia Brown.mlmodel */; };
-		AEA21B3D2587B1AA0004E535 /* Acrylic White.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B352587B1A90004E535 /* Acrylic White.mlmodel */; };
-		AEA21B3E2587B1AA0004E535 /* Acrylic Red.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B362587B1A90004E535 /* Acrylic Red.mlmodel */; };
-		AEA21B3F2587B1AA0004E535 /* Acrylic Yellow Ochre.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B372587B1A90004E535 /* Acrylic Yellow Ochre.mlmodel */; };
-		AEA21B402587B1AA0004E535 /* Acrylic Light Blue.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B382587B1A90004E535 /* Acrylic Light Blue.mlmodel */; };
-		AEA21B412587B1AA0004E535 /* Acrylic Dark Blue.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B392587B1AA0004E535 /* Acrylic Dark Blue.mlmodel */; };
-		AEA21B422587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B3A2587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel */; };
-		AEA21B432587B1AA0004E535 /* Acrylic Yellow.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B3B2587B1AA0004E535 /* Acrylic Yellow.mlmodel */; };
 		AEAB54A0253B701900514348 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB549F253B701900514348 /* ColorViewController.swift */; };
 		AEAB54A9253C9E7400514348 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB54A8253C9E7400514348 /* NavigationViewController.swift */; };
 		AEB090252539CFA600FF76E4 /* MVC+AVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB090242539CFA600FF76E4 /* MVC+AVView.swift */; };
@@ -70,18 +70,18 @@
 		AE25AF47252CC13C006ECCEE /* Color MatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Color MatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE25AF4B252CC13C006ECCEE /* Color_MatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_MatchUITests.swift; sourceTree = "<group>"; };
 		AE25AF4D252CC13C006ECCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE303FAB259D2E6800141B26 /* Acrylic Sepia Brown.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Acrylic Sepia Brown.mlmodel"; sourceTree = "<group>"; };
+		AE303FAC259D2E6800141B26 /* Acrylic Light Blue.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Acrylic Light Blue.mlmodel"; sourceTree = "<group>"; };
+		AE303FAD259D2E6800141B26 /* Acrylic Burnt Umber.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Acrylic Burnt Umber.mlmodel"; sourceTree = "<group>"; };
+		AE303FAE259D2E6800141B26 /* Acrylic White.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Acrylic White.mlmodel"; sourceTree = "<group>"; };
+		AE303FAF259D2E6800141B26 /* Acrylic Yellow.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Acrylic Yellow.mlmodel"; sourceTree = "<group>"; };
+		AE303FB0259D2E6800141B26 /* Acrylic Yellow Ochre.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Acrylic Yellow Ochre.mlmodel"; sourceTree = "<group>"; };
+		AE303FB1259D2E6800141B26 /* Acrylic Red.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Acrylic Red.mlmodel"; sourceTree = "<group>"; };
+		AE303FB2259D2E6800141B26 /* Acrylic Dark Blue.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Acrylic Dark Blue.mlmodel"; sourceTree = "<group>"; };
 		AE676DB425484EA000E91159 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		AE676DBA25484FC700E91159 /* AC+ActionsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AC+ActionsUtil.swift"; sourceTree = "<group>"; };
 		AE71E1052554BF8A00D80686 /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
 		AE71E10D2554C1EC00D80686 /* LibraryItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemViewCell.swift; sourceTree = "<group>"; };
-		AEA21B342587B1A90004E535 /* Acrylic Sepia Brown.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Sepia Brown.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Sepia Brown.mlmodel"; sourceTree = "<group>"; };
-		AEA21B352587B1A90004E535 /* Acrylic White.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic White.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic White.mlmodel"; sourceTree = "<group>"; };
-		AEA21B362587B1A90004E535 /* Acrylic Red.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Red.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Red.mlmodel"; sourceTree = "<group>"; };
-		AEA21B372587B1A90004E535 /* Acrylic Yellow Ochre.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Yellow Ochre.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Yellow Ochre.mlmodel"; sourceTree = "<group>"; };
-		AEA21B382587B1A90004E535 /* Acrylic Light Blue.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Light Blue.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Light Blue.mlmodel"; sourceTree = "<group>"; };
-		AEA21B392587B1AA0004E535 /* Acrylic Dark Blue.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Dark Blue.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Dark Blue.mlmodel"; sourceTree = "<group>"; };
-		AEA21B3A2587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Burnt Umber.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Burnt Umber.mlmodel"; sourceTree = "<group>"; };
-		AEA21B3B2587B1AA0004E535 /* Acrylic Yellow.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Yellow.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Yellow.mlmodel"; sourceTree = "<group>"; };
 		AEAB549F253B701900514348 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		AEAB54A8253C9E7400514348 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		AEB090242539CFA600FF76E4 /* MVC+AVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVC+AVView.swift"; sourceTree = "<group>"; };
@@ -173,6 +173,21 @@
 			path = "Color MatchUITests";
 			sourceTree = "<group>";
 		};
+		AE303FAA259D2E6800141B26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE303FAB259D2E6800141B26 /* Acrylic Sepia Brown.mlmodel */,
+				AE303FAC259D2E6800141B26 /* Acrylic Light Blue.mlmodel */,
+				AE303FAD259D2E6800141B26 /* Acrylic Burnt Umber.mlmodel */,
+				AE303FAE259D2E6800141B26 /* Acrylic White.mlmodel */,
+				AE303FAF259D2E6800141B26 /* Acrylic Yellow.mlmodel */,
+				AE303FB0259D2E6800141B26 /* Acrylic Yellow Ochre.mlmodel */,
+				AE303FB1259D2E6800141B26 /* Acrylic Red.mlmodel */,
+				AE303FB2259D2E6800141B26 /* Acrylic Dark Blue.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AE676DB925484FAE00E91159 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,25 +265,10 @@
 		AEED5EAB252CDB9C0062A618 /* Machine Learning */ = {
 			isa = PBXGroup;
 			children = (
+				AE303FAA259D2E6800141B26 /* Models */,
 				AEDB65982543730800D8DBE6 /* ColorReplicator.swift */,
-				AEEDE673255055B2003DA3A7 /* Models */,
 			);
 			path = "Machine Learning";
-			sourceTree = "<group>";
-		};
-		AEEDE673255055B2003DA3A7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AEA21B3A2587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel */,
-				AEA21B392587B1AA0004E535 /* Acrylic Dark Blue.mlmodel */,
-				AEA21B382587B1A90004E535 /* Acrylic Light Blue.mlmodel */,
-				AEA21B362587B1A90004E535 /* Acrylic Red.mlmodel */,
-				AEA21B342587B1A90004E535 /* Acrylic Sepia Brown.mlmodel */,
-				AEA21B352587B1A90004E535 /* Acrylic White.mlmodel */,
-				AEA21B372587B1A90004E535 /* Acrylic Yellow Ochre.mlmodel */,
-				AEA21B3B2587B1AA0004E535 /* Acrylic Yellow.mlmodel */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,28 +402,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEA21B402587B1AA0004E535 /* Acrylic Light Blue.mlmodel in Sources */,
-				AEA21B432587B1AA0004E535 /* Acrylic Yellow.mlmodel in Sources */,
+				AE303FB8259D2E6800141B26 /* Acrylic Yellow Ochre.mlmodel in Sources */,
 				AE676DB525484EA000E91159 /* Utility.swift in Sources */,
+				AE303FB7259D2E6800141B26 /* Acrylic Yellow.mlmodel in Sources */,
 				AEDB65992543730800D8DBE6 /* ColorReplicator.swift in Sources */,
+				AE303FB5259D2E6800141B26 /* Acrylic Burnt Umber.mlmodel in Sources */,
+				AE303FB9259D2E6800141B26 /* Acrylic Red.mlmodel in Sources */,
 				AE676DBB25484FC700E91159 /* AC+ActionsUtil.swift in Sources */,
-				AEA21B3D2587B1AA0004E535 /* Acrylic White.mlmodel in Sources */,
-				AEA21B3F2587B1AA0004E535 /* Acrylic Yellow Ochre.mlmodel in Sources */,
 				AEDB65A6254378E500D8DBE6 /* SettingsObject.swift in Sources */,
 				AEDB65A1254378AD00D8DBE6 /* SavedDataManager.swift in Sources */,
 				AE25AF2E252CC139006ECCEE /* MainViewController.swift in Sources */,
+				AE303FBA259D2E6800141B26 /* Acrylic Dark Blue.mlmodel in Sources */,
 				AEDB6591254372A800D8DBE6 /* ColorLibraryObject.swift in Sources */,
-				AEA21B412587B1AA0004E535 /* Acrylic Dark Blue.mlmodel in Sources */,
 				AEDB656C254362F000D8DBE6 /* CVC+ColorReplication.swift in Sources */,
+				AE303FB6259D2E6800141B26 /* Acrylic White.mlmodel in Sources */,
 				AE25AF2A252CC139006ECCEE /* AppDelegate.swift in Sources */,
-				AEA21B3E2587B1AA0004E535 /* Acrylic Red.mlmodel in Sources */,
-				AEA21B422587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel in Sources */,
 				AEB090252539CFA600FF76E4 /* MVC+AVView.swift in Sources */,
-				AEA21B3C2587B1AA0004E535 /* Acrylic Sepia Brown.mlmodel in Sources */,
+				AE303FB3259D2E6800141B26 /* Acrylic Sepia Brown.mlmodel in Sources */,
 				AEDB658625436D0100D8DBE6 /* SettingsTableViewController.swift in Sources */,
 				AE71E1062554BF8A00D80686 /* LibraryCollectionViewController.swift in Sources */,
 				AEAB54A0253B701900514348 /* ColorViewController.swift in Sources */,
 				AE71E10E2554C1EC00D80686 /* LibraryItemViewCell.swift in Sources */,
+				AE303FB4259D2E6800141B26 /* Acrylic Light Blue.mlmodel in Sources */,
 				AEAB54A9253C9E7400514348 /* NavigationViewController.swift in Sources */,
 				AE25AF2C252CC139006ECCEE /* SceneDelegate.swift in Sources */,
 			);
