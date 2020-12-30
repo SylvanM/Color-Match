@@ -6,3 +6,5 @@ When painting, different pigments are used to create color. When looking at the 
 
 Our application uses a machine learning model to calculate the percentages of pigments needed to recreate a desired color. 
 
+The image on the left shows the screen that lets you select a color. The screen on the right shows the pigment percentages necessary for mixing the desired color. 
+![Images for GitHub](https://user-images.githubusercontent.com/33966592/103377542-b025d880-4aad-11eb-8dd4-68b591da7cdc.jpg)
