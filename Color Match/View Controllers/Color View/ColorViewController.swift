@@ -59,6 +59,8 @@ class ColorViewController: UIViewController {
     @IBOutlet weak var burntUmberPigmentLabel: UIProgressView!
     @IBOutlet weak var whitePigmentLabel: UIProgressView!
     
+    @IBOutlet weak var ratioTextView: UITextView!
+    
     var pigmentBars: [ColorReplicator.Paint : UIProgressView]!
     
     var colorBars:  [UIProgressView] = []
@@ -115,8 +117,59 @@ class ColorViewController: UIViewController {
         
         
         
+        var sortedPigments: [(ColorReplicator.Paint, Double)] = pigments.map { $0 }
+        sortedPigments.sort { $0.1 < $1.1 } // sort all values by their pigment values
+        
+        
+        
         for key in pigments.keys {
             pigmentBars[key]?.setProgress(Float(pigments[key]!), animated: true)
+        }
+        
+        // Actually, we're just gonna pick the top 3 or 4 colors.
+        
+//        // Now do some statistical tests to find outliers
+//
+//        let q1 = sortedPigments[sortedPigments.count / 4].1
+//        let q3 = sortedPigments[3 * sortedPigments.count / 4].1
+//
+//        let threshold = 0.8
+//
+//        let iqr = q3 - q1
+//        let lowerFence = q1 - threshold * iqr
+//        let upperFence = q3 + threshold * iqr
+//
+//        print(lowerFence)
+//        print(upperFence)
+//
+//        print(sortedPigments.count)
+//
+//        // Get new array, excluding outliers
+//        sortedPigments.removeAll { $0.1 < lowerFence || $0.1 > upperFence }
+//
+//        print(sortedPigments.count)
+        
+        var ratioColors = Array(sortedPigments.suffix(from: sortedPigments.count - 3))
+        
+        // calculate ratio
+//        let minimum = (ratioColors.min { $0.1 < $1.1 })!.1
+        
+    
+        for i in 0..<ratioColors.count {
+            print(ratioColors[i])
+            ratioColors[i].1 = round(10 * ratioColors[i].1)
+        }
+        
+//        let total = ratioColors.reduce(0) { $0 + $1.1 }
+//
+//        for i in 0..<ratioColors.count {
+//            print(ratioColors[i].0, ratioColors[i].1)
+//        }
+        
+        ratioTextView.text = "\(ratioColors[0].0): \(ratioColors[0].1)\n\(ratioColors[1].0): \(ratioColors[1].1)\n\(ratioColors[2].0): \(ratioColors[2].1)\n"
+        
+        for pigment in sortedPigments {
+            print(pigment.0, pigment.1)
         }
         
     }

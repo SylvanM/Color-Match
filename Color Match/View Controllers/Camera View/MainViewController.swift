@@ -104,14 +104,14 @@ class MainViewController: UIViewController {
     
     @IBAction func captureButtonWasPressed(_ sender: Any) {
         
-        var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
-        colorView.tintColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
+//        var (red, green, blue): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
+//        colorView.tintColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
+//
+//        print("\(idCounter), \(red), \(green), \(blue)")
+//
+//        idCounter += 1
         
-        print("\(idCounter), \(red), \(green), \(blue)")
-        
-        idCounter += 1
-        
-//        performSegue(withIdentifier: "show_color_view", sender: self)
+        performSegue(withIdentifier: "show_color_view", sender: self)
         
     }
     
