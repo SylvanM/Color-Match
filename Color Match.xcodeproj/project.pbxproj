@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE25AF2A252CC139006ECCEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25AF29252CC139006ECCEE /* AppDelegate.swift */; };
+		AE25AF2C252CC139006ECCEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25AF2B252CC139006ECCEE /* SceneDelegate.swift */; };
+		AE25AF2E252CC139006ECCEE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25AF2D252CC139006ECCEE /* MainViewController.swift */; };
+		AE25AF31252CC139006ECCEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE25AF2F252CC139006ECCEE /* Main.storyboard */; };
+		AE25AF33252CC13B006ECCEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE25AF32252CC13B006ECCEE /* Assets.xcassets */; };
+		AE25AF36252CC13B006ECCEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE25AF34252CC13B006ECCEE /* LaunchScreen.storyboard */; };
+		AE25AF41252CC13C006ECCEE /* Color_MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25AF40252CC13C006ECCEE /* Color_MatchTests.swift */; };
+		AE25AF4C252CC13C006ECCEE /* Color_MatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE25AF4B252CC13C006ECCEE /* Color_MatchUITests.swift */; };
+		AE676DB525484EA000E91159 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE676DB425484EA000E91159 /* Utility.swift */; };
+		AE676DBB25484FC700E91159 /* AC+ActionsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE676DBA25484FC700E91159 /* AC+ActionsUtil.swift */; };
+		AE71E1062554BF8A00D80686 /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE71E1052554BF8A00D80686 /* LibraryCollectionViewController.swift */; };
+		AE71E10E2554C1EC00D80686 /* LibraryItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE71E10D2554C1EC00D80686 /* LibraryItemViewCell.swift */; };
+		AEA21B3C2587B1AA0004E535 /* Acrylic Sepia Brown.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B342587B1A90004E535 /* Acrylic Sepia Brown.mlmodel */; };
+		AEA21B3D2587B1AA0004E535 /* Acrylic White.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B352587B1A90004E535 /* Acrylic White.mlmodel */; };
+		AEA21B3E2587B1AA0004E535 /* Acrylic Red.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B362587B1A90004E535 /* Acrylic Red.mlmodel */; };
+		AEA21B3F2587B1AA0004E535 /* Acrylic Yellow Ochre.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B372587B1A90004E535 /* Acrylic Yellow Ochre.mlmodel */; };
+		AEA21B402587B1AA0004E535 /* Acrylic Light Blue.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B382587B1A90004E535 /* Acrylic Light Blue.mlmodel */; };
+		AEA21B412587B1AA0004E535 /* Acrylic Dark Blue.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B392587B1AA0004E535 /* Acrylic Dark Blue.mlmodel */; };
+		AEA21B422587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B3A2587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel */; };
+		AEA21B432587B1AA0004E535 /* Acrylic Yellow.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEA21B3B2587B1AA0004E535 /* Acrylic Yellow.mlmodel */; };
+		AEAB54A0253B701900514348 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB549F253B701900514348 /* ColorViewController.swift */; };
+		AEAB54A9253C9E7400514348 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB54A8253C9E7400514348 /* NavigationViewController.swift */; };
+		AEB090252539CFA600FF76E4 /* MVC+AVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB090242539CFA600FF76E4 /* MVC+AVView.swift */; };
+		AEDB656C254362F000D8DBE6 /* CVC+ColorReplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDB656B254362F000D8DBE6 /* CVC+ColorReplication.swift */; };
+		AEDB658625436D0100D8DBE6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDB658525436D0100D8DBE6 /* SettingsTableViewController.swift */; };
+		AEDB6591254372A800D8DBE6 /* ColorLibraryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDB6590254372A800D8DBE6 /* ColorLibraryObject.swift */; };
+		AEDB65992543730800D8DBE6 /* ColorReplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDB65982543730800D8DBE6 /* ColorReplicator.swift */; };
+		AEDB65A1254378AD00D8DBE6 /* SavedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDB65A0254378AD00D8DBE6 /* SavedDataManager.swift */; };
+		AEDB65A6254378E500D8DBE6 /* SettingsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDB65A5254378E500D8DBE6 /* SettingsObject.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE25AF3D252CC13C006ECCEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE25AF1E252CC139006ECCEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE25AF25252CC139006ECCEE;
+			remoteInfo = "Color Match";
+		};
+		AE25AF48252CC13C006ECCEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE25AF1E252CC139006ECCEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE25AF25252CC139006ECCEE;
+			remoteInfo = "Color Match";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE25AF26252CC139006ECCEE /* Color Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE25AF29252CC139006ECCEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE25AF2B252CC139006ECCEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE25AF2D252CC139006ECCEE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AE25AF30252CC139006ECCEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE25AF32252CC13B006ECCEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE25AF35252CC13B006ECCEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE25AF37252CC13B006ECCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE25AF3C252CC13B006ECCEE /* Color MatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Color MatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE25AF40252CC13C006ECCEE /* Color_MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_MatchTests.swift; sourceTree = "<group>"; };
+		AE25AF42252CC13C006ECCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE25AF47252CC13C006ECCEE /* Color MatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Color MatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE25AF4B252CC13C006ECCEE /* Color_MatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_MatchUITests.swift; sourceTree = "<group>"; };
+		AE25AF4D252CC13C006ECCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE676DB425484EA000E91159 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		AE676DBA25484FC700E91159 /* AC+ActionsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AC+ActionsUtil.swift"; sourceTree = "<group>"; };
+		AE71E1052554BF8A00D80686 /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
+		AE71E10D2554C1EC00D80686 /* LibraryItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItemViewCell.swift; sourceTree = "<group>"; };
+		AEA21B342587B1A90004E535 /* Acrylic Sepia Brown.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Sepia Brown.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Sepia Brown.mlmodel"; sourceTree = "<group>"; };
+		AEA21B352587B1A90004E535 /* Acrylic White.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic White.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic White.mlmodel"; sourceTree = "<group>"; };
+		AEA21B362587B1A90004E535 /* Acrylic Red.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Red.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Red.mlmodel"; sourceTree = "<group>"; };
+		AEA21B372587B1A90004E535 /* Acrylic Yellow Ochre.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Yellow Ochre.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Yellow Ochre.mlmodel"; sourceTree = "<group>"; };
+		AEA21B382587B1A90004E535 /* Acrylic Light Blue.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Light Blue.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Light Blue.mlmodel"; sourceTree = "<group>"; };
+		AEA21B392587B1AA0004E535 /* Acrylic Dark Blue.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Dark Blue.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Dark Blue.mlmodel"; sourceTree = "<group>"; };
+		AEA21B3A2587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Burnt Umber.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Burnt Umber.mlmodel"; sourceTree = "<group>"; };
+		AEA21B3B2587B1AA0004E535 /* Acrylic Yellow.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "Acrylic Yellow.mlmodel"; path = "../../../../../../../Documents/School/12th Grade/EDD/Machine Learning/Models/Acrylic Yellow.mlmodel"; sourceTree = "<group>"; };
+		AEAB549F253B701900514348 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		AEAB54A8253C9E7400514348 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		AEB090242539CFA600FF76E4 /* MVC+AVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVC+AVView.swift"; sourceTree = "<group>"; };
+		AEDB656B254362F000D8DBE6 /* CVC+ColorReplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVC+ColorReplication.swift"; sourceTree = "<group>"; };
+		AEDB658525436D0100D8DBE6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		AEDB6590254372A800D8DBE6 /* ColorLibraryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLibraryObject.swift; sourceTree = "<group>"; };
+		AEDB65982543730800D8DBE6 /* ColorReplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorReplicator.swift; sourceTree = "<group>"; };
+		AEDB65A0254378AD00D8DBE6 /* SavedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataManager.swift; sourceTree = "<group>"; };
+		AEDB65A5254378E500D8DBE6 /* SettingsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsObject.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE25AF23252CC139006ECCEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25AF39252CC13B006ECCEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25AF44252CC13C006ECCEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE25AF1D252CC139006ECCEE = {
+			isa = PBXGroup;
+			children = (
+				AE25AF28252CC139006ECCEE /* Color Match */,
+				AE25AF3F252CC13C006ECCEE /* Color MatchTests */,
+				AE25AF4A252CC13C006ECCEE /* Color MatchUITests */,
+				AE25AF27252CC139006ECCEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE25AF27252CC139006ECCEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE25AF26252CC139006ECCEE /* Color Match.app */,
+				AE25AF3C252CC13B006ECCEE /* Color MatchTests.xctest */,
+				AE25AF47252CC13C006ECCEE /* Color MatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE25AF28252CC139006ECCEE /* Color Match */ = {
+			isa = PBXGroup;
+			children = (
+				AE676DB925484FAE00E91159 /* Utility */,
+				AEDB658F2543722A00D8DBE6 /* Classes */,
+				AE7EACFE2538BD0B00433C27 /* View Controllers */,
+				AEED5EAB252CDB9C0062A618 /* Machine Learning */,
+				AE25AF29252CC139006ECCEE /* AppDelegate.swift */,
+				AE25AF2B252CC139006ECCEE /* SceneDelegate.swift */,
+				AE25AF2F252CC139006ECCEE /* Main.storyboard */,
+				AE25AF32252CC13B006ECCEE /* Assets.xcassets */,
+				AE25AF34252CC13B006ECCEE /* LaunchScreen.storyboard */,
+				AE25AF37252CC13B006ECCEE /* Info.plist */,
+			);
+			path = "Color Match";
+			sourceTree = "<group>";
+		};
+		AE25AF3F252CC13C006ECCEE /* Color MatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE25AF40252CC13C006ECCEE /* Color_MatchTests.swift */,
+				AE25AF42252CC13C006ECCEE /* Info.plist */,
+			);
+			path = "Color MatchTests";
+			sourceTree = "<group>";
+		};
+		AE25AF4A252CC13C006ECCEE /* Color MatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE25AF4B252CC13C006ECCEE /* Color_MatchUITests.swift */,
+				AE25AF4D252CC13C006ECCEE /* Info.plist */,
+			);
+			path = "Color MatchUITests";
+			sourceTree = "<group>";
+		};
+		AE676DB925484FAE00E91159 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				AE676DB425484EA000E91159 /* Utility.swift */,
+				AE676DBA25484FC700E91159 /* AC+ActionsUtil.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		AE71E1042554BF6100D80686 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				AE71E1052554BF8A00D80686 /* LibraryCollectionViewController.swift */,
+				AE71E10D2554C1EC00D80686 /* LibraryItemViewCell.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		AE7EACFE2538BD0B00433C27 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE71E1042554BF6100D80686 /* Library */,
+				AEDB657025436AC700D8DBE6 /* Settings */,
+				AEAB54A7253C9E6600514348 /* Navigation */,
+				AEAB549E253B700A00514348 /* Color View */,
+				AE7EACFF2538BD1900433C27 /* Camera View */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AE7EACFF2538BD1900433C27 /* Camera View */ = {
+			isa = PBXGroup;
+			children = (
+				AE25AF2D252CC139006ECCEE /* MainViewController.swift */,
+				AEB090242539CFA600FF76E4 /* MVC+AVView.swift */,
+			);
+			path = "Camera View";
+			sourceTree = "<group>";
+		};
+		AEAB549E253B700A00514348 /* Color View */ = {
+			isa = PBXGroup;
+			children = (
+				AEDB656B254362F000D8DBE6 /* CVC+ColorReplication.swift */,
+				AEAB549F253B701900514348 /* ColorViewController.swift */,
+			);
+			path = "Color View";
+			sourceTree = "<group>";
+		};
+		AEAB54A7253C9E6600514348 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AEAB54A8253C9E7400514348 /* NavigationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		AEDB657025436AC700D8DBE6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AEDB658525436D0100D8DBE6 /* SettingsTableViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AEDB658F2543722A00D8DBE6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AEDB6590254372A800D8DBE6 /* ColorLibraryObject.swift */,
+				AEDB65A0254378AD00D8DBE6 /* SavedDataManager.swift */,
+				AEDB65A5254378E500D8DBE6 /* SettingsObject.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AEED5EAB252CDB9C0062A618 /* Machine Learning */ = {
+			isa = PBXGroup;
+			children = (
+				AEDB65982543730800D8DBE6 /* ColorReplicator.swift */,
+				AEEDE673255055B2003DA3A7 /* Models */,
+			);
+			path = "Machine Learning";
+			sourceTree = "<group>";
+		};
+		AEEDE673255055B2003DA3A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEA21B3A2587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel */,
+				AEA21B392587B1AA0004E535 /* Acrylic Dark Blue.mlmodel */,
+				AEA21B382587B1A90004E535 /* Acrylic Light Blue.mlmodel */,
+				AEA21B362587B1A90004E535 /* Acrylic Red.mlmodel */,
+				AEA21B342587B1A90004E535 /* Acrylic Sepia Brown.mlmodel */,
+				AEA21B352587B1A90004E535 /* Acrylic White.mlmodel */,
+				AEA21B372587B1A90004E535 /* Acrylic Yellow Ochre.mlmodel */,
+				AEA21B3B2587B1AA0004E535 /* Acrylic Yellow.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE25AF25252CC139006ECCEE /* Color Match */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE25AF50252CC13C006ECCEE /* Build configuration list for PBXNativeTarget "Color Match" */;
+			buildPhases = (
+				AE25AF22252CC139006ECCEE /* Sources */,
+				AE25AF23252CC139006ECCEE /* Frameworks */,
+				AE25AF24252CC139006ECCEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Color Match";
+			productName = "Color Match";
+			productReference = AE25AF26252CC139006ECCEE /* Color Match.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE25AF3B252CC13B006ECCEE /* Color MatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE25AF53252CC13C006ECCEE /* Build configuration list for PBXNativeTarget "Color MatchTests" */;
+			buildPhases = (
+				AE25AF38252CC13B006ECCEE /* Sources */,
+				AE25AF39252CC13B006ECCEE /* Frameworks */,
+				AE25AF3A252CC13B006ECCEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE25AF3E252CC13C006ECCEE /* PBXTargetDependency */,
+			);
+			name = "Color MatchTests";
+			productName = "Color MatchTests";
+			productReference = AE25AF3C252CC13B006ECCEE /* Color MatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE25AF46252CC13C006ECCEE /* Color MatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE25AF56252CC13C006ECCEE /* Build configuration list for PBXNativeTarget "Color MatchUITests" */;
+			buildPhases = (
+				AE25AF43252CC13C006ECCEE /* Sources */,
+				AE25AF44252CC13C006ECCEE /* Frameworks */,
+				AE25AF45252CC13C006ECCEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE25AF49252CC13C006ECCEE /* PBXTargetDependency */,
+			);
+			name = "Color MatchUITests";
+			productName = "Color MatchUITests";
+			productReference = AE25AF47252CC13C006ECCEE /* Color MatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE25AF1E252CC139006ECCEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					AE25AF25252CC139006ECCEE = {
+						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1220;
+					};
+					AE25AF3B252CC13B006ECCEE = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = AE25AF25252CC139006ECCEE;
+					};
+					AE25AF46252CC13C006ECCEE = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = AE25AF25252CC139006ECCEE;
+					};
+				};
+			};
+			buildConfigurationList = AE25AF21252CC139006ECCEE /* Build configuration list for PBXProject "Color Match" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE25AF1D252CC139006ECCEE;
+			productRefGroup = AE25AF27252CC139006ECCEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE25AF25252CC139006ECCEE /* Color Match */,
+				AE25AF3B252CC13B006ECCEE /* Color MatchTests */,
+				AE25AF46252CC13C006ECCEE /* Color MatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE25AF24252CC139006ECCEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE25AF36252CC13B006ECCEE /* LaunchScreen.storyboard in Resources */,
+				AE25AF33252CC13B006ECCEE /* Assets.xcassets in Resources */,
+				AE25AF31252CC139006ECCEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25AF3A252CC13B006ECCEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25AF45252CC13C006ECCEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE25AF22252CC139006ECCEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA21B402587B1AA0004E535 /* Acrylic Light Blue.mlmodel in Sources */,
+				AEA21B432587B1AA0004E535 /* Acrylic Yellow.mlmodel in Sources */,
+				AE676DB525484EA000E91159 /* Utility.swift in Sources */,
+				AEDB65992543730800D8DBE6 /* ColorReplicator.swift in Sources */,
+				AE676DBB25484FC700E91159 /* AC+ActionsUtil.swift in Sources */,
+				AEA21B3D2587B1AA0004E535 /* Acrylic White.mlmodel in Sources */,
+				AEA21B3F2587B1AA0004E535 /* Acrylic Yellow Ochre.mlmodel in Sources */,
+				AEDB65A6254378E500D8DBE6 /* SettingsObject.swift in Sources */,
+				AEDB65A1254378AD00D8DBE6 /* SavedDataManager.swift in Sources */,
+				AE25AF2E252CC139006ECCEE /* MainViewController.swift in Sources */,
+				AEDB6591254372A800D8DBE6 /* ColorLibraryObject.swift in Sources */,
+				AEA21B412587B1AA0004E535 /* Acrylic Dark Blue.mlmodel in Sources */,
+				AEDB656C254362F000D8DBE6 /* CVC+ColorReplication.swift in Sources */,
+				AE25AF2A252CC139006ECCEE /* AppDelegate.swift in Sources */,
+				AEA21B3E2587B1AA0004E535 /* Acrylic Red.mlmodel in Sources */,
+				AEA21B422587B1AA0004E535 /* Acrylic Burnt Umber.mlmodel in Sources */,
+				AEB090252539CFA600FF76E4 /* MVC+AVView.swift in Sources */,
+				AEA21B3C2587B1AA0004E535 /* Acrylic Sepia Brown.mlmodel in Sources */,
+				AEDB658625436D0100D8DBE6 /* SettingsTableViewController.swift in Sources */,
+				AE71E1062554BF8A00D80686 /* LibraryCollectionViewController.swift in Sources */,
+				AEAB54A0253B701900514348 /* ColorViewController.swift in Sources */,
+				AE71E10E2554C1EC00D80686 /* LibraryItemViewCell.swift in Sources */,
+				AEAB54A9253C9E7400514348 /* NavigationViewController.swift in Sources */,
+				AE25AF2C252CC139006ECCEE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25AF38252CC13B006ECCEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE25AF41252CC13C006ECCEE /* Color_MatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE25AF43252CC13C006ECCEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE25AF4C252CC13C006ECCEE /* Color_MatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE25AF3E252CC13C006ECCEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE25AF25252CC139006ECCEE /* Color Match */;
+			targetProxy = AE25AF3D252CC13C006ECCEE /* PBXContainerItemProxy */;
+		};
+		AE25AF49252CC13C006ECCEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE25AF25252CC139006ECCEE /* Color Match */;
+			targetProxy = AE25AF48252CC13C006ECCEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE25AF2F252CC139006ECCEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE25AF30252CC139006ECCEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE25AF34252CC13B006ECCEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE25AF35252CC13B006ECCEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE25AF4E252CC13C006ECCEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE25AF4F252CC13C006ECCEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE25AF51252CC13C006ECCEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				INFOPLIST_FILE = "Color Match/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "martin.Color-Match";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE25AF52252CC13C006ECCEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				INFOPLIST_FILE = "Color Match/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "martin.Color-Match";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE25AF54252CC13C006ECCEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				INFOPLIST_FILE = "Color MatchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "martin.Color-MatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Color Match.app/Color Match";
+			};
+			name = Debug;
+		};
+		AE25AF55252CC13C006ECCEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				INFOPLIST_FILE = "Color MatchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "martin.Color-MatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Color Match.app/Color Match";
+			};
+			name = Release;
+		};
+		AE25AF57252CC13C006ECCEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				INFOPLIST_FILE = "Color MatchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "martin.Color-MatchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Color Match";
+			};
+			name = Debug;
+		};
+		AE25AF58252CC13C006ECCEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				INFOPLIST_FILE = "Color MatchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "martin.Color-MatchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Color Match";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE25AF21252CC139006ECCEE /* Build configuration list for PBXProject "Color Match" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE25AF4E252CC13C006ECCEE /* Debug */,
+				AE25AF4F252CC13C006ECCEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE25AF50252CC13C006ECCEE /* Build configuration list for PBXNativeTarget "Color Match" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE25AF51252CC13C006ECCEE /* Debug */,
+				AE25AF52252CC13C006ECCEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE25AF53252CC13C006ECCEE /* Build configuration list for PBXNativeTarget "Color MatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE25AF54252CC13C006ECCEE /* Debug */,
+				AE25AF55252CC13C006ECCEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE25AF56252CC13C006ECCEE /* Build configuration list for PBXNativeTarget "Color MatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE25AF57252CC13C006ECCEE /* Debug */,
+				AE25AF58252CC13C006ECCEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE25AF1E252CC139006ECCEE /* Project object */;
+}
