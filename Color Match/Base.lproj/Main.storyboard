@@ -138,25 +138,11 @@
                                             <constraint firstAttribute="height" constant="100" id="zOD-1Z-Mge"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvA-nh-xXV">
-                                        <rect key="frame" x="45" y="17.5" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="T23-dE-3RW"/>
-                                            <constraint firstAttribute="width" constant="75" id="siB-4p-wxe"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" backgroundImage="gearshape" catalog="system"/>
-                                        <connections>
-                                            <segue destination="3M4-q8-L3g" kind="presentation" id="6zN-Tt-Jh8"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6U-6b-7A0">
-                                        <rect key="frame" x="294" y="17.5" width="75" height="75"/>
+                                        <rect key="frame" x="312" y="25" width="60" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="Icf-Bg-Jsb"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="JnI-vt-MaF"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="TN9-WY-M3A"/>
-                                            <constraint firstAttribute="width" constant="75" id="yMQ-xm-t0N"/>
+                                            <constraint firstAttribute="width" constant="60" id="dBD-ye-JXf"/>
+                                            <constraint firstAttribute="height" constant="60" id="y0Q-tb-T0z"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="book.closed" catalog="system"/>
@@ -164,15 +150,27 @@
                                             <segue destination="pCV-e6-Qev" kind="presentation" id="0hk-qv-qVr"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvA-nh-xXV">
+                                        <rect key="frame" x="42" y="25" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="KMf-Gd-VyN"/>
+                                            <constraint firstAttribute="height" constant="60" id="ztY-hg-GkP"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="gearshape" catalog="system"/>
+                                        <connections>
+                                            <segue destination="3M4-q8-L3g" kind="presentation" id="6zN-Tt-Jh8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="I6U-6b-7A0" firstAttribute="centerY" secondItem="bOz-ri-pke" secondAttribute="centerY" id="DIK-bV-qqH"/>
+                                    <constraint firstItem="I6U-6b-7A0" firstAttribute="leading" secondItem="8CP-Hh-x8Y" secondAttribute="trailing" constant="55" id="1Rh-ev-rWP"/>
+                                    <constraint firstItem="I6U-6b-7A0" firstAttribute="centerY" secondItem="bOz-ri-pke" secondAttribute="centerY" id="Sx7-2U-y4D"/>
+                                    <constraint firstItem="8CP-Hh-x8Y" firstAttribute="leading" secondItem="NvA-nh-xXV" secondAttribute="trailing" constant="55" id="TRo-Jq-Tuc"/>
                                     <constraint firstItem="8CP-Hh-x8Y" firstAttribute="centerX" secondItem="bOz-ri-pke" secondAttribute="centerX" id="WqQ-1c-aMd"/>
                                     <constraint firstAttribute="height" constant="110" id="ZKK-Vn-fHu"/>
                                     <constraint firstItem="8CP-Hh-x8Y" firstAttribute="centerY" secondItem="bOz-ri-pke" secondAttribute="centerY" id="ZMk-bz-iv2"/>
-                                    <constraint firstAttribute="trailing" secondItem="I6U-6b-7A0" secondAttribute="trailing" constant="45" id="jvf-iu-Tn6"/>
-                                    <constraint firstItem="NvA-nh-xXV" firstAttribute="centerY" secondItem="bOz-ri-pke" secondAttribute="centerY" id="qeZ-1u-Efs"/>
-                                    <constraint firstItem="NvA-nh-xXV" firstAttribute="leading" secondItem="bOz-ri-pke" secondAttribute="leading" constant="45" id="yzk-pH-uXT"/>
+                                    <constraint firstItem="NvA-nh-xXV" firstAttribute="centerY" secondItem="bOz-ri-pke" secondAttribute="centerY" id="ccl-Qx-s20"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lpf-I4-NEf" userLabel="View Finder">
