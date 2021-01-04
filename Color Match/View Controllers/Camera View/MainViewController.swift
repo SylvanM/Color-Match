@@ -44,15 +44,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(self.view.bounds)
-        print(self.cameraView.bounds)
-        cameraLayer.frame = cameraView.bounds
-        setupSession()
+        // Commented out so nina can run it without it crashing
+//        print(self.cameraView.bounds)
+        
+//        cameraLayer.frame = cameraView.bounds
+//        setupSession()
         
         
+        // Commented out so nina can run it without it crashing
+//        cameraView.layer.addSublayer(cameraLayer)
+//        view.sendSubviewToBack(cameraView)
+//        view.bringSubviewToFront(colorView)
         
-        cameraView.layer.addSublayer(cameraLayer)
-        view.sendSubviewToBack(cameraView)
-        view.bringSubviewToFront(colorView)
         let colorlib = ColorLibraryObject()
         colorlib.saveLibrary()
         
@@ -66,7 +69,8 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        cameraLayer.session?.startRunning()
+        // Commented out so nina can run it without it crashing
+//        cameraLayer.session?.startRunning()
     }
     
     // MARK: View Functions
